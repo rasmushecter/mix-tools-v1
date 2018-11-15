@@ -17,6 +17,8 @@ function demoKnob() {
     // Set initial value.
     knob.setValue(0);
 
+
+
     /*
      * Event listener.
      *
