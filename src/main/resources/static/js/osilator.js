@@ -6,7 +6,7 @@ var tone = 200;
 oscillator.type = 'square';
 oscillator.frequency.setValueAtTime(tone, audioCtx.currentTime); // value in hertz
 oscillator.connect(audioCtx.destination);
-oscillator.start(0);
+onclick(oscillator.start(0));
 
 
 document.getElementById('osc');

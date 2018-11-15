@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
@@ -19,14 +20,14 @@ public class CalculateController {
     @Autowired
     RevRepo rR;
 
-    @GetMapping("/calculateBpm")
+    @GetMapping("/getCalculateBpm")
     public String getCalculateBpm()
     {
 
         return "calculateBpm";
     }
 
-    @PostMapping("/calculateBpm")
+    @PostMapping("/postCalculateBpm")
     public String calculateBpmResult(@RequestParam("bpm")  double bpm)
     {
 
