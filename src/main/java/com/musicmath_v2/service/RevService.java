@@ -47,7 +47,8 @@ public class RevService implements RevRepo {
         r.setSixtyfourNote(result7);
 
     }
-    public ArrayList<RevEntity> getAll()
+
+    public ArrayList<RevEntity>  getAll()
     {
         ArrayList<RevEntity>revList = new ArrayList<>();
 

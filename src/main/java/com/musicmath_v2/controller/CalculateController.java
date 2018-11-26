@@ -1,7 +1,9 @@
 package com.musicmath_v2.controller;
 
 
+import com.musicmath_v2.repository.DottedBpmRepo;
 import com.musicmath_v2.repository.RevRepo;
+import com.musicmath_v2.repository.TripletBpmRepo;
 import com.musicmath_v2.service.RevService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,12 @@ public class CalculateController {
     @Autowired
     RevRepo rR;
 
+    @Autowired
+    DottedBpmRepo dbR;
+
+    @Autowired
+    TripletBpmRepo tbR;
+
     @GetMapping("/getCalculateBpm")
     public String getCalculateBpm()
     {
@@ -32,6 +40,8 @@ public class CalculateController {
     {
 
                 rR.revBpm(bpm);
+                dbR.dottedBpm(bpm);
+                tbR.tripletBpm(bpm);
                 return "redirect:/calculateBpmResult";
     }
 
@@ -39,6 +49,8 @@ public class CalculateController {
     public String printCalculateResult(Model model)
     {
         model.addAttribute("arrayOfRevtimes",rR.getAll());
+        model.addAttribute("arrayOfDottedtimes", dbR.getAll());
+        model.addAttribute("arrayOfTripletTimes", tbR.getAll());
         return "calculateBpmResult";
     }
 }
