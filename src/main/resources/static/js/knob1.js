@@ -1,6 +1,4 @@
-/*
-        * Demo code for knob element.
-        */
+
 function demoKnob() {
     // Create knob element, 300 x 300 px in size.
     var knob = pureknob.createKnob(400, 400);
@@ -29,8 +27,11 @@ function demoKnob() {
      * Parameter 'value' is the value which was set
      * by the user.
      */
+
     var listener = function(knob, value) {
-        console.log(value);
+        console.log(value); //log current value in browser console
+        oscillator.frequency.setValueAtTime(value, audioCtx.currentTime); //update listener with new value
+
     };
 
     knob.addListener(listener);
@@ -43,9 +44,6 @@ function demoKnob() {
     elem.appendChild(node);
 }
 
-/*
- * Demo code for bar graph element.
- */
 
 /*
  * This is executed after the document finished loading.

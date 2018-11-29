@@ -11,7 +11,7 @@ import java.util.ArrayList;
 @Service
 public class RevService implements RevRepo {
 
-    RevEntity r = new RevEntity();
+    private RevEntity r = new RevEntity();
 
 
     public void revBpm(double bpm)

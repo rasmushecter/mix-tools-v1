@@ -2,11 +2,10 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // create Oscillator node
 var oscillator = audioCtx.createOscillator();
-var tone = 200;
-oscillator.type = 'square';
-oscillator.frequency.setValueAtTime(tone, audioCtx.currentTime); // value in hertz
+oscillator.type = 'sine'; //can be square, sine, sawtooth or triangle waves
+oscillator.frequency.setValueAtTime(440, audioCtx.currentTime); // value in hertz
 oscillator.connect(audioCtx.destination);
-onclick(oscillator.start(0));
+oscillator.start();
 
 
 document.getElementById('osc');

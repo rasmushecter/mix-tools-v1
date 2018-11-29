@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Service
 public class DottedBpmService implements DottedBpmRepo {
 
-    DottedBpmEntity d = new DottedBpmEntity();
+    private DottedBpmEntity d = new DottedBpmEntity();
 
 
     public void dottedBpm(double bpm){

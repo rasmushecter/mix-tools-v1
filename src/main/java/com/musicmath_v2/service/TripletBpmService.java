@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Service
 public class TripletBpmService implements TripletBpmRepo {
 
-    TripletBpmEntity t = new TripletBpmEntity();
+    private TripletBpmEntity t = new TripletBpmEntity();
 
 
     public void tripletBpm(double bpm){
