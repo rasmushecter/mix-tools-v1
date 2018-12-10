@@ -12,35 +12,37 @@ public class TripletBpmService implements TripletBpmRepo {
     private TripletBpmEntity t = new TripletBpmEntity();
 
 
-    public void tripletBpm(double bpm){
+    public double tripletBpm(double bpm){
 
-        double result1;
-        result1 = 240000/bpm*0.667;
-        t.setWholeNote(result1);
+        double result;
+        result = 240000/bpm*0.667;
+        t.setWholeNote(result);
 
-        double result2;
-        result2 = 120000/bpm*0.667;
-        t.setHalfNote(result2);
+        //double result2;
+        result = 120000/bpm*0.667;
+        t.setHalfNote(result);
 
-        double result3;
-        result3 = 60000/bpm*0.667;
-        t.setFourthNote(result3);
+        //double result3;
+        result = 60000/bpm*0.667;
+        t.setFourthNote(result);
 
-        double result4;
-        result4 = 30000/bpm*0.667;
-        t.setEightNote(result4);
+        //double result4;
+        result = 30000/bpm*0.667;
+        t.setEightNote(result);
 
-        double result5;
-        result5 = 15000/bpm*0.667;
-        t.setSixteenNote(result5);
+        //double result5;
+        result = 15000/bpm*0.667;
+        t.setSixteenNote(result);
 
-        double result6;
-        result6 = 7500/bpm*0.667;
-        t.setThertyTwoNote(result6);
+        //double result6;
+        result = 7500/bpm*0.667;
+        t.setThertyTwoNote(result);
 
-        double result7;
-        result7 = 3750/bpm*0.667;
-        t.setSixtyfourNote(result7);
+        //double result7;
+        result = 3750/bpm*0.667;
+        t.setSixtyfourNote(result);
+
+        return result;
     }
 
     public ArrayList<TripletBpmEntity> getAll(){

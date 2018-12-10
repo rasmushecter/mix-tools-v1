@@ -12,35 +12,37 @@ public class DottedBpmService implements DottedBpmRepo {
     private DottedBpmEntity d = new DottedBpmEntity();
 
 
-    public void dottedBpm(double bpm){
+    public double dottedBpm(double bpm){
 
-        double result1;
-        result1 = 240000/bpm*1.5 ;
-        d.setWholeNote(result1);
+        double result;
+        result = 240000/bpm*1.5 ;
+        d.setWholeNote(result);
 
-        double result2;
-        result2 = 120000/bpm*1.5 ;
-        d.setHalfNote(result2);
+        //double result1;
+        result = 120000/bpm*1.5 ;
+        d.setHalfNote(result);
 
-        double result3;
-        result3 = 60000/bpm*1.5 ;
-        d.setFourthNote(result3);
+        //double result3;
+        result = 60000/bpm*1.5 ;
+        d.setFourthNote(result);
 
-        double result4;
-        result4 = 30000/bpm*1.5 ;
-        d.setEightNote(result4);
+        //double result4;
+        result = 30000/bpm*1.5 ;
+        d.setEightNote(result);
 
-        double result5;
-        result5 = 15000/bpm*1.5 ;
-        d.setSixteenNote(result5);
+        //double result5;
+        result = 15000/bpm*1.5 ;
+        d.setSixteenNote(result);
 
-        double result6;
-        result6 = 7500/bpm*1.5 ;
-        d.setThertyTwoNote(result6);
+        //double result6;
+        result = 7500/bpm*1.5 ;
+        d.setThertyTwoNote(result);
 
-        double result7;
-        result7 = 3750/bpm*1.5 ;
-        d.setSixtyfourNote(result7);
+        //double result7;
+        result = 3750/bpm*1.5 ;
+        d.setSixtyfourNote(result);
+
+        return result;
     }
 
     public ArrayList<DottedBpmEntity> getAll(){

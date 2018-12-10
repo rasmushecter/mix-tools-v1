@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public interface DottedBpmRepo {
 
-    void dottedBpm(double bpm);
+    double dottedBpm(double bpm);
 
     ArrayList<DottedBpmEntity> getAll();
 }

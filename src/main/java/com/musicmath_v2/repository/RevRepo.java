@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public interface RevRepo {
 
-    void revBpm(double bpm);
+    double revBpm(double bpm);
 
     ArrayList<RevEntity> getAll();
 

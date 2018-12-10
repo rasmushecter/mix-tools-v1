@@ -42,10 +42,10 @@ public class CalculateController {
                 rR.revBpm(bpm);
                 dbR.dottedBpm(bpm);
                 tbR.tripletBpm(bpm);
-                return "redirect:/calculateBpmResult";
+                return "redirect:/getCalculateBpmResult";
     }
 
-    @GetMapping("/calculateBpmResult")
+    @GetMapping("/getCalculateBpmResult")
     public String printCalculateResult(Model model)
     {
         model.addAttribute("arrayOfRevtimes",rR.getAll());

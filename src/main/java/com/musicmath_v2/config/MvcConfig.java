@@ -39,7 +39,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     private Connector redirectConnector() {
         Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
         connector.setScheme("http");
-        connector.setPort(8080);
+        connector.setPort(8000);
         connector.setSecure(false);
         connector.setRedirectPort(5000);
         return connector;

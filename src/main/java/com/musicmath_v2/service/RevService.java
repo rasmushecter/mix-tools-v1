@@ -14,37 +14,39 @@ public class RevService implements RevRepo {
     private RevEntity r = new RevEntity();
 
 
-    public void revBpm(double bpm)
+    public double revBpm(double bpm)
     {
 
 
-        double result1;
-        result1 = 240000/bpm ;
-        r.setWholeNote(result1);
+        double result;
+        result = 240000/bpm ;
+        r.setWholeNote(result);
 
-        double result2;
-        result2 = 120000/bpm ;
-        r.setHalfNote(result2);
+        //double result2;
+        result = 120000/bpm ;
+        r.setHalfNote(result);
 
-        double result3;
-        result3 = 60000/bpm ;
-        r.setFourthNote(result3);
+        //double result3;
+        result = 60000/bpm ;
+        r.setFourthNote(result);
 
-        double result4;
-        result4 = 30000/bpm ;
-        r.setEightNote(result4);
+        //double result4;
+        result = 30000/bpm ;
+        r.setEightNote(result);
 
-        double result5;
-        result5 = 15000/bpm ;
-        r.setSixteenNote(result5);
+        //double result5;
+        result = 15000/bpm ;
+        r.setSixteenNote(result);
 
-        double result6;
-        result6 = 7500/bpm ;
-        r.setThertyTwoNote(result6);
+        //double result6;
+        result = 7500/bpm ;
+        r.setThertyTwoNote(result);
 
-        double result7;
-        result7 = 3750/bpm ;
-        r.setSixtyfourNote(result7);
+        //double result7;
+        result = 3750/bpm ;
+        r.setSixtyfourNote(result);
+
+        return result;
 
     }
 

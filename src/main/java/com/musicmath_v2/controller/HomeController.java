@@ -11,7 +11,7 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("musicTheory")
+    @GetMapping("/getMusicTheory")
     public String getHomeSite()
     {
         return "musicTheory";

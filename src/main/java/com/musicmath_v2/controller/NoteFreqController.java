@@ -22,7 +22,7 @@ public class NoteFreqController {
 
     FreqEntity f = new FreqEntity();
 
-    @GetMapping("/noteFreq")
+    @GetMapping("/getNoteFreq")
     public String getNoteFreq()
     {
 

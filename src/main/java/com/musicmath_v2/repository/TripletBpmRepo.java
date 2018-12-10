@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public interface TripletBpmRepo {
 
-    void tripletBpm(double bpm);
+    double tripletBpm(double bpm);
 
     ArrayList<TripletBpmEntity> getAll();
 }
